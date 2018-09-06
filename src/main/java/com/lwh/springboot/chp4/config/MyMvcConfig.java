@@ -35,14 +35,14 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
                 registry.addViewController("/main.html").setViewName("dashboard");
             }
 
-//            /** 注册拦截器 **/
-//            @Override
-//            public void addInterceptors(InterceptorRegistry registry) {
-//                /** (/**)拦截所有请求,但是exclude中的三个请求不拦截 **/
-//                /** SpringBoot已经做好了静态资源映射,我们不用处理 **/
-//                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-//                        .excludePathPatterns("/login.html", "/", "/user/login");
-//            }
+            /** 注册拦截器 **/
+            @Override
+            public void addInterceptors(InterceptorRegistry registry) {
+                /** (/**)拦截所有请求,但是exclude中的三个请求不拦截 **/
+                /** SpringBoot已经做好了静态资源映射,我们不用处理 **/
+                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+                        .excludePathPatterns("/login.html", "/", "/user/login");
+            }
         };
 
         return adapter;
