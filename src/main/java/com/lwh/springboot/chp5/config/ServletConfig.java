@@ -28,7 +28,7 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
             //定制嵌入式的Servlet容器的相关规则
             @Override
             public void customize(ConfigurableEmbeddedServletContainer container) {
-                container.setPort(8083);
+                container.setPort(8084);
             }
         };
     }
