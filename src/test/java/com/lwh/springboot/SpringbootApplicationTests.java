@@ -1,12 +1,12 @@
 package com.lwh.springboot;
 
-import org.apache.tomcat.jdbc.pool.DataSource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -19,7 +19,7 @@ public class SpringbootApplicationTests {
 
     @Test
     public void contextLoads() throws SQLException {
-        //org.apache.tomcat.jdbc.pool.DataSource
+        //默认是org.apache.tomcat.jdbc.pool.DataSource
         System.out.println(dataSource.getClass());
         Connection connection = dataSource.getConnection();
         System.out.println(connection);

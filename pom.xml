@@ -97,6 +97,13 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!--引入自定义的Druid数据源-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.8</version>
+        </dependency>
+
     </dependencies>
 
     <!-- 这个插件可以将应用打成一个可执行的jar包 -->

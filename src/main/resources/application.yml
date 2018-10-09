@@ -39,3 +39,4 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     schema:
       - classpath:department.sql
+    type: com.alibaba.druid.pool.DruidDataSource
