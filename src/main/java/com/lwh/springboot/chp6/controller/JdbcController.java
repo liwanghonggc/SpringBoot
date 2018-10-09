@@ -1,4 +1,4 @@
-package com.lwh.springboot.chp6;
+package com.lwh.springboot.chp6.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
