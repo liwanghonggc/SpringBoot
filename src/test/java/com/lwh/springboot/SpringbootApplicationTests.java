@@ -1,31 +1,28 @@
 package com.lwh.springboot;
 
-import com.lwh.springboot.chp2.bean.Person;
+import org.apache.tomcat.jdbc.pool.DataSource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.sql.Connection;
+import java.sql.SQLException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringbootApplicationTests {
 
     @Autowired
-    private Person person;
-
-    @Autowired
-    private ApplicationContext ctx;
+    DataSource dataSource;
 
     @Test
-    public void contextLoads() {
-        System.out.println(person);
+    public void contextLoads() throws SQLException {
+        //org.apache.tomcat.jdbc.pool.DataSource
+        System.out.println(dataSource.getClass());
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection);
+        connection.close();
     }
-
-    @Test
-    public void containsBean(){
-        System.out.println(ctx.containsBean("helloService"));
-    }
-
 }

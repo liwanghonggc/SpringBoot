@@ -11,22 +11,31 @@
 #    name: 严海斌
 #    age: 12
 
-server:
-  port: 8081
+#server:
+#  port: 8081
+#spring:
+#  profiles:
+#    active: prod
+#---
+#
+#
+#server:
+#  port: 8083
+#spring:
+#  profiles: dev
+#
+#
+#---
+#server:
+#  port: 8085
+#spring:
+#  profiles: prod
+
 spring:
-  profiles:
-    active: prod
----
-
-
-server:
-  port: 8083
-spring:
-  profiles: dev
-
-
----
-server:
-  port: 8085
-spring:
-  profiles: prod
+  datasource:
+    username: root
+    password: 2109
+    url: jdbc:mysql://localhost:3306/springboot
+    driver-class-name: com.mysql.jdbc.Driver
+    schema:
+      - classpath:department.sql
