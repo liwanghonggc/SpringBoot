@@ -37,8 +37,9 @@ spring:
     password: 2109
     url: jdbc:mysql://localhost:3306/springboot
     driver-class-name: com.mysql.jdbc.Driver
-    schema:
-      - classpath:department.sql
+#    schema:
+#      - classpath:sql/department.sql
+#      - classpath:sql/employee.sql
     type: com.alibaba.druid.pool.DruidDataSource
 
     #Druid数据源的其他一些配置,这里不起作用,需要另写配置类

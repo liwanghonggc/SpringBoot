@@ -104,6 +104,13 @@
             <version>1.1.8</version>
         </dependency>
 
+        <!--引入Mybatis依赖-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
     </dependencies>
 
     <!-- 这个插件可以将应用打成一个可执行的jar包 -->
